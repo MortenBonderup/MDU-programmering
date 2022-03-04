@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title>PWD CaseWork</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript">
+		// PASSWORD PROTECTION SCRIPT		
+		function TheLogin() {
+		var password = 'eaaa';
+		var brugernavn = 'eaaa';	
+		if (this.document.login.pass.value == password && this.document.login.name.value == brugernavn) {
+		    window.alert("TILLYKKE!!! Kodeord og navn er korrekt og du logges ind :-)");
+			top.location.href="strategi.html";
+		}
+		else {
+			if (this.document.login.pass.value != password && this.document.login.name.value != brugernavn)
+				window.alert("Kodeord er forkert og Navn er ukendt - prøv veligst igen :-)");
+			else if (this.document.login.pass.value != password)
+				window.alert("Navn er kendt men Kodeord er forkert - prøv veligst igen :-)");
+			else if (this.document.login.name.value != brugernavn)
+				window.alert("Navn er ukendt men kodeordet er rigtigt - prøv veligst igen :-)");	  		
+		  }
+		}
+	</script>
+</head>
+<body>
+	<section class="site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header class="masthead">
+			
+			<p class="site-title">login</p>
+			<p class="site-description"></p>
+		</header>
+		<!-- .masthead -->
+		<h1 class="page-title">Password protected</h1>
+		<main id="content" class="main-content"><div style="text-align: center; margin: 0 auto; color: #0000FF; font: normal 16px arial, sans-serif;">
+			NAME:<br>
+			<form name="login" style="margin: 5px 0px 0px 0px;">
+			<input type="text" name="name" size="17" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 130px;" required><br>
+			<br>PASSWORD:<br>
+			<input type="text" name="pass" size="17" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 130px;" required><br><br>
+			<input type="button" value="Login" style="width: 134px; margin: 4px auto 4px auto;" onclick="javascript:TheLogin(this.form)">
+			</form>
+			</div>
+			<ul class="schedule-list">
+				<li>
+				</li>
+			</ul>
+		</main>
+		<aside class="sidebar">
+			<ul class="info">
+				<li class="grey">
+					<h2 class="info-heading">What ever</h2>
+				</li>
+				<li class="grey1">
+					<h2 class="info-heading">NO info</h2>
+				</li>
+				<li class="grey">
+					<h2 class="info-heading">needed for</h2>
+				</li>
+				<li class="grey1">
+					<h2 class="info-heading">NO loginners</h2>
+				</li>
+			</ul>
+		</aside>
+		<footer class="colophon">
+			<address>ZOOM Hidden location AREA RS 104<br/></address>
+			  <!-- Insert this tag where you want the widget to render -->
+			<iframe width="486" height="454" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0">
+		</footer>
+	</section>
+</body>
